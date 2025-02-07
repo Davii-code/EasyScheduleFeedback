@@ -3,9 +3,7 @@ package com.doc.easyschedulefeedback.entities;
 import com.doc.easyschedulefeedback.enums.TypeUser;
 import com.doc.genericarchitecturesecurity.domain.GenericModel;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
@@ -17,6 +15,8 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "users")
 public class User implements GenericModel<Long> {
+    @Getter
+    @Setter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -47,4 +47,14 @@ public class User implements GenericModel<Long> {
 
     @Column(nullable = false)
     private LocalDateTime updatedin;
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
