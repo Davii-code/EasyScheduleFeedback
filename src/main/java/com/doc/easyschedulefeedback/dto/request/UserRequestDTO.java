@@ -1,4 +1,4 @@
-package com.doc.easyschedulefeedback.dto;
+package com.doc.easyschedulefeedback.dto.request;
 
 import com.doc.genericarchitecturesecurity.annotation.MandatoryField;
 import lombok.AllArgsConstructor;
