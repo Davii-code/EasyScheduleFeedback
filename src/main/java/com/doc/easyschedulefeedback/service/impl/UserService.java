@@ -8,7 +8,9 @@ import com.doc.easyschedulefeedback.mapper.UserMapper;
 import com.doc.easyschedulefeedback.repository.UserRepository;
 import com.doc.easyschedulefeedback.service.IUserService;
 import com.doc.genericarchitecturesecurity.service.impl.AbstractService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserService extends AbstractService<UserRequestDTO, UserResponseDTO, UserListDTO, User, UserRepository, UserMapper, Long>
         implements IUserService {
     @Override
