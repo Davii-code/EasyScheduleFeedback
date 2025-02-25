@@ -36,17 +36,10 @@ public class User implements GenericModel<Long> {
     @Column(nullable = false)
     private Boolean enabled;
 
-    @Column(nullable = false)
-    private String phone;
+    @ManyToOne
+    @JoinColumn(name = "user_group_id", nullable = false)
+    private UserGroup userGroup;
 
-    @Column(nullable = false)
-    private TypeUser typeUser;
-
-    @Column(nullable = false)
-    private LocalDateTime createin;
-
-    @Column(nullable = false)
-    private LocalDateTime updatedin;
 
     @Override
     public Long getId() {
